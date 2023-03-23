@@ -397,10 +397,18 @@ def raizCubicaMenor (n1:float, n2: float, n3: float, n4: float, n5: float) -> fl
     raiz_cubica = -((-mínimo) ** (1/3))
   return raiz_cubica
 ```
+Este punto no tenemos como tal una imagen de prueba pues aquí no le pedimos que nos imprima ningún resultado. Sin embargo, podemos deducir que está realizado de manera correcta pues funciona a la perfección en el punto 7 que es donde lo importamos 
 
 ## Punto #9
 
 Consultar qué es y cómo funciona *pip* en python.
+
+### Solución punto #9
+Pip es un sistema de gestión de paquetes de Python que permite instalar y administrar paquetes de software escritos en Python. Con pip, los usuarios pueden descargar e instalar paquetes desde el repositorio PyPI (Python Package Index), así como también compartir sus propios paquetes con la comunidad de Python.
+
+Pip también se encarga de gestionar las dependencias del paquete, es decir, instalar cualquier otro paquete que el paquete en cuestión necesite para funcionar correctamente. Además, pip permite a los desarrolladores gestionar las diferentes versiones de los paquetes, lo que significa que pueden instalar, actualizar o desinstalar paquetes específicos según sea necesario. Esto es especialmente útil en proyectos grandes o complejos que pueden depender de muchos paquetes diferentes.
+
+En resumen, pip es una herramienta esencial para cualquier desarrollador de Python ya que facilita enormemente la instalación y gestión de paquetes de software, lo que a su vez puede ayudar a acelerar el desarrollo de proyectos y aumentar la productividad.
 
 ## Punto #10
 
