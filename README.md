@@ -6,6 +6,7 @@ Buen día, el día de hoy les mostraré como desarrollé los puntos del reto #6,
 
 ## Punto #1
 
+
 1. Dado la figura de la imagen, desarrolle:
 
 <div align='center'>
@@ -18,6 +19,50 @@ Buen día, el día de hoy les mostraré como desarrollé los puntos del reto #6,
 + Revise como utilizar el valor de `pi` usando *import math* y *math.pi*
 
 ### Solución punto #1
+
+``` python
+#Importamos pi desde la libreria de Math
+from math import pi
+#Definimos todas las funciones que nos ayudarán a encontrar las respuestas que necesitamos
+def calcularAreaEsfera(r1:float) -> float:
+ areaEsfera= ((4*pi)*(r1**2))
+ return areaEsfera
+
+def calcularVolumenEsfera(r1:float)->float:
+   volumenEsfera=((4/3)*(pi)*(r1**3))
+   return volumenEsfera
+
+def calcularAreaCono (r2:float, altura:float)->float:
+    operacion=(((r2)**2)+((altura)**2))**0.5
+    AreaCono=(pi*r2)*(pi+operacion)
+    return AreaCono
+
+def calcularVolumenCono(r2:float, altura:float)->float:
+   volumenCono=((1/3)*(pi)*(r2**2))
+   return volumenCono
+
+#Definimos las demás funciones que necesitamos, haciendo uso de las funciones anteriormente definidas
+def calcularAreaFigura (r1:float, r2:float, altura:float) -> float:
+    AreaFigura= calcularAreaEsfera(r1) +calcularAreaCono(r2, altura)
+    return AreaFigura 
+
+def calcularVolumenFigura (r1:float, r2:float, altura:float) -> float:
+ VolumenFigura=calcularVolumenCono(r2, altura) +calcularVolumenEsfera(r1)
+ return VolumenFigura
+
+#LLamamos la funcion principal, , definimos los valores que necesitamos, en este caso el área y el volumen
+if __name__ == "__main__":
+   #Colocamos los input
+   r1 = float(input("Ingrese el radio de la esfera: "))
+   r2= float(input("Ingrese el  radio del cono: "))
+   altura= float(input("Ingrese la altura del cono: "))
+   #definimos los valores que necesitamos, en este caso área y volumen
+   area = calcularAreaFigura(r1, r2, altura) 
+   volumen = calcularVolumenFigura(r1, r2, altura)
+   #Imprimimos los resultados y redondeamos la respuesta
+print("El area de la figura es "+ str(round(area,8))) 
+print("El volumen de la figura es "+ str(round(volumen,8)))
+```
 
 ## Punto #2
 
@@ -34,6 +79,48 @@ Dado la figura de la imagen, desarrolle:
 
 ### Solución punto #2
 
+``` python
+#Importamos pi desde la libreria math
+from math import pi
+
+#Definimos las funciones que vamos a utilizar para hallar los datos que necesitamos
+def calcularAreaCírculo(r:float)->float:
+   areaCírculo=((pi)*(r**2))
+   return areaCírculo
+
+def calcularAreaRectángulo (base:float, altura:float)->float:
+   areaRectángulo=base*altura
+   return areaRectángulo
+
+def calcularPerímetroRectángulo (base:float, altura:float)->float:
+   perímetroRectángulo=(base*2)+(altura*2)
+   return perímetroRectángulo
+
+def calcularPerímetroCírculo (r:float)->float:
+   perímetroCírculo=(2*pi*r)
+   return perímetroCírculo
+
+#Definimos las siguentes funciones haciendo uso de las anteriormente realizadas
+def calcularAreaFigura (altura:float, base:float, r:float)->float:
+ areaFigura= (calcularAreaCírculo(r)*2)  + calcularAreaRectángulo(base, altura)
+ return areaFigura
+def calcularPerimetroFigura (altura:float, base:float, radio:float)->float:
+ perimetroFigura= (calcularPerímetroCírculo(r)*2) + calcularPerímetroRectángulo(base, altura)
+ return perimetroFigura
+
+#Llamamos la función principal
+if __name__=="__main__":
+    #Colocamos todos los input
+    altura = float(input("Ingrese la altura: "))
+    base = float(input("Ingrese la base: "))
+    r = float(input("Ingrese el radio: " ))
+    #Definimos los resultados
+    Área= calcularAreaFigura(altura, base, r)
+    Perímetro= calcularPerimetroFigura(altura, base, r)
+    #Imprimimos los resultados redondeando su respuesta a 6 decimales
+    print ("El perimetro de la figura es "+ str(round(Perímetro,6)))
+    print ("El area de la figura es "+ str(round(Área,6)))
+``` 
 ## Punto #3
 
 Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 
@@ -154,11 +241,125 @@ Escriba un programa que pida 5 números reales y calcule las siguientes operacio
 
 ### Solución punto #7
 
+``` python
+#Importamos las funciones que realizamos en el punto 8
+import OperacionesReto
+#Llamamos la función principal
+if __name__ == "__main__":
+    n1 = float (input("Ingrese un número real: "))
+    n2 = float (input("Ingrese un número real: "))
+    n3 = float (input("Ingrese un número real: "))
+    n4 = float (input("Ingrese un número real: "))
+    n5 = float (input("Ingrese un número real: "))
+
+    #Definimos todos los resultados que luego imprimiremos
+    Promedio = OperacionesReto.promedio (n1,n2,n3,n4,n5)  #Es importante no olvidar los argumentos
+    print ("El promedio de ", n1,n2,n3,n4,n5, "es:" , Promedio) #Imprimos el resultado
+
+    PromedioMult = OperacionesReto.promedioMultiplicativo (n1,n2,n3,n4,n5)
+    print ("El promedio multiplicativo de los números es de: ", PromedioMult)
+
+    Mediana = OperacionesReto.calcularMediana (n1,n2,n3,n4,n5)
+    print ( "La mediana de", n1,n2,n3,n4,n5, "es:", Mediana)
+
+    Ascendente = OperacionesReto.ordenarAscendente (n1,n2,n3,n4,n5)
+    print ("Números ordenados de forma ascendente:", Ascendente)
+
+    Descendente = OperacionesReto.ordenarDescendente (n1,n2,n3,n4,n5)
+    print ("Números ordenados de forma descente:", Descendente)
+
+    Potencia = OperacionesReto.potenciaMayorMenor (n1,n2,n3,n4,n5)
+    print ("La potencia del mayor número elevado al menor número es:", Potencia)
+
+    Raíz = OperacionesReto.raizCubicaMenor (n1,n2,n3,n4,n5)
+    print ("La raíz cúbica del menor número es: ", Raíz)
+```
+
 ## Punto #8
 
 Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso
 
 ### Solución punto #8
+
+``` python
+#Importamos una libreria pues es necesaria en una de las funciones que definiremos
+import statistics
+
+#Definimos todas las funciones que necesitamos y que importaremos en el punto 7
+def promedio(n1,n2,n3,n4,n5) : 
+    Promedio = (n1+n2+n3+n4+n5)/5
+    return Promedio 
+
+def promedioMultiplicativo (n1:float, n2:float, n3:float, n4:float, n5:float)->float:
+  promedioM= (n1*n2*n3*n4*n5)**(1/5)
+  return promedioM
+
+def calcularMediana (n1:float, n2: float, n3: float, n4: float, n5: float) -> float:
+   mediana = statistics.median ([n1,n2,n3,n4,n5])
+   return mediana
+
+def ordenarAscendente (n1:float, n2: float, n3: float, n4: float, n5: float) -> float:
+  if n1 > n2:
+      n1, n2 = n2, n1
+  if n2 > n3:
+      n2, n3 = n3, n2
+  if n3 > n4:
+      n3, n4 = n4, n3
+  if n4 > n5:
+      n4, n5 = n5, n4
+  if n1 > n2:
+      n1, n2 = n2, n1
+  if n2 > n3:
+      n2, n3 = n3, n2
+  if n3 > n4:
+      n3, n4 = n4, n3
+  if n1 > n2:
+      n1, n2 = n2, n1
+  if n2 > n3:
+      n2, n3 = n3, n2
+  if n1 > n2:
+      n1, n2 = n2, n1
+
+  return n1, n2, n3, n4, n5
+
+def ordenarDescendente (n1:float, n2: float, n3: float, n4: float, n5: float) -> float:
+  if n1 < n2:
+      n1, n2 = n2, n1
+  if n2 < n3:
+      n2, n3 = n3, n2
+  if n3 < n4:
+      n3, n4 = n4, n3
+  if n4 < n5:
+      n4, n5 = n5, n4
+  if n1 < n2:
+      n1, n2 = n2, n1
+  if n2 < n3:
+      n2, n3 = n3, n2
+  if n3 < n4:
+      n3, n4 = n4, n3
+  if n1 < n2:
+      n1, n2 = n2, n1
+  if n2 < n3:
+      n2, n3 = n3, n2
+  if n1 < n2:
+      n1, n2 = n2, n1
+
+  return n1, n2, n3, n4, n5
+
+def potenciaMayorMenor (n1:float, n2: float, n3: float, n4: float, n5: float) -> float:
+    máximo = max(n1,n2,n3,n4,n5)
+    mínimo = min(n1,n2,n3,n4,n5)
+    potencia = máximo ** mínimo
+    return potencia
+
+def raizCubicaMenor (n1:float, n2: float, n3: float, n4: float, n5: float) -> float:
+  mínimo = min (n1,n2,n3,n4,n5)
+  if mínimo>= 0: 
+    raiz_cubica = mínimo ** (1/3)
+  else:
+    raiz_cubica = -((-mínimo) ** (1/3))
+  return raiz_cubica
+```
 
 ## Punto #9
 
