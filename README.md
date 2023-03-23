@@ -20,6 +20,8 @@ Buen día, el día de hoy les mostraré como desarrollé los puntos del reto #6,
 
 ### Solución punto #1
 
+Para este punto obtuve el siguiente código :
+
 ``` python
 #Importamos pi desde la libreria de Math
 from math import pi
@@ -63,6 +65,9 @@ if __name__ == "__main__":
 print("El area de la figura es "+ str(round(area,8))) 
 print("El volumen de la figura es "+ str(round(volumen,8)))
 ```
+Y al momento de correrlo en el terminal obtenemos algo así:
+
+[![Captura-de-pantalla-2023-03-23-115708.png](https://i.postimg.cc/2SChMMtn/Captura-de-pantalla-2023-03-23-115708.png)](https://postimg.cc/sv0MZ6s2)
 
 ## Punto #2
 
@@ -78,6 +83,8 @@ Dado la figura de la imagen, desarrolle:
 + Revise como utilizar el valor de `pi` usando *import math* y *math.pi*
 
 ### Solución punto #2
+
+Para este punto diseñé el siguiente código: 
 
 ``` python
 #Importamos pi desde la libreria math
@@ -121,6 +128,10 @@ if __name__=="__main__":
     print ("El perimetro de la figura es "+ str(round(Perímetro,6)))
     print ("El area de la figura es "+ str(round(Área,6)))
 ``` 
+Y al momento de correrlo en el terminal obtenemos algo así:
+
+[![Captura-de-pantalla-2023-03-23-120038.png](https://i.postimg.cc/8k61g5QV/Captura-de-pantalla-2023-03-23-120038.png)](https://postimg.cc/nMn8vnhd)
+
 ## Punto #3
 
 Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 
@@ -149,6 +160,11 @@ pesoTotal = calcularCarne (Gallinas, Gallos, Pollitos)
 #Imprimimos el resultado
 print ("El peso total de todos los animales ingresados es de:", pesoTotal, "kilos")
 ```
+Al momento de probarlo obtenemos lo siguiente: 
+
+[![Captura-de-pantalla-2023-03-23-122344.png](https://i.postimg.cc/7Zr72VTt/Captura-de-pantalla-2023-03-23-122344.png)](https://postimg.cc/vcXcR5h5)
+
+Listo, ahora seguimos con el punto #4
 
 ## Punto #4
 
@@ -156,7 +172,7 @@ Mi mamá me manda a comprar P panes a 300 cada uno, M bolsas de leche a  3300 ca
 que me diga las vueltas (o lo que quedo debiendo) cuando me da un billete de B pesos.
 
 ### Solución punto #4
-
+Aquí en este punto obtuve el siguiente código: 
 ```python
 #Le solicitamos al usuario que ingrese los datos necesitados para realizar el cálculo
 Pan =int (input("Ingrese cantidad de panes que va a comprar: "))
