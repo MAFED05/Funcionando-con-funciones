@@ -197,6 +197,12 @@ else:
     print ("La cantidad faltante de dinero para completar la compra es de:" , -vueltas, " pesos")
 ```   
 
+Y al probar el código podemos obtener lo siguiente:
+
+[![Captura-de-pantalla-2023-03-23-132357.png](https://i.postimg.cc/NG6c13pw/Captura-de-pantalla-2023-03-23-132357.png)](https://postimg.cc/s1gqz0kn)
+
+Ya llegamos a la mitad del reto, sigamos al punto #5
+
 ## Punto #5
 
 Haga un programa que utilice una función para calcular el valor de un préstamo `C` usando interés compuesto del `i` por `n` meses.
@@ -220,6 +226,9 @@ valorFinal = valorFinalPrestamo(Capital, interes, tiempo)
 #Imprimimos el resultado final
 print("El valor del préstamo después de", tiempo, "meses es:", round(valorFinal, 3))
 ```
+Y en el momento de probarlo obtenemos lo siguiente:
+
+[![Captura-de-pantalla-2023-03-23-132922.png](https://i.postimg.cc/Y0MSwYtX/Captura-de-pantalla-2023-03-23-132922.png)](https://postimg.cc/2b9YQqbv)
 
 ## Punto #6
 
@@ -227,6 +236,8 @@ print("El valor del préstamo después de", tiempo, "meses es:", round(valorFina
  personas que se han contagiado cuando pasen D días a partir de hoy, si el número de contagiados actuales es C.
  
  ### Solución punto #6
+ 
+ Para el sexto punto tenemos el siguiente código:
 
 ``` python
 #Le solicitamos al usuario que ingrese los datos con los cuales realizaremos el cálculo
@@ -244,6 +255,11 @@ totalContagios = calcularContagiados (Dias, Contagiados)
 #Imprimimos el resultado
 print ("El número de personas contagiadas en ", Dias , " días será de:",  totalContagios)
 ```
+
+Y al momento de probarlo obtenemos lo siguiente:
+
+[![Captura-de-pantalla-2023-03-23-142133.png](https://i.postimg.cc/KYXjNR18/Captura-de-pantalla-2023-03-23-142133.png)](https://postimg.cc/PC4dffbg)
+
 ## Punto #7
 
 Escriba un programa que pida 5 números reales y calcule las siguientes operaciones usando una función para cada una:
@@ -290,12 +306,17 @@ if __name__ == "__main__":
     Raíz = OperacionesReto.raizCubicaMenor (n1,n2,n3,n4,n5)
     print ("La raíz cúbica del menor número es: ", Raíz)
 ```
+Al probarlo obtenemos lo siguiente: 
+
+[![Captura-de-pantalla-2023-03-23-142403.png](https://i.postimg.cc/N0gqBcVx/Captura-de-pantalla-2023-03-23-142403.png)](https://postimg.cc/nXwwG6ns)
 
 ## Punto #8
 
 Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso
 
 ### Solución punto #8
+
+En este punto solo definimos todas las funciones que utilizamos en el punto anterior
 
 ``` python
 #Importamos una libreria pues es necesaria en una de las funciones que definiremos
