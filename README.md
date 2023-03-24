@@ -413,3 +413,49 @@ En resumen, pip es una herramienta esencial para cualquier desarrollador de Pyth
 ## Punto #10
 
 Hacer un listado de módulos populares para python que se puedan instalar com *pip* y consultar cómo instalarlos.
+
++ Numpy: para cálculo numérico en Python
+```python
+pip install numpy
+```
++ Pandas: para manipulación y análisis de datos en Python
+```python
+pip install pandas
+```
++ Matplotlib: para visualización de datos en Python
+```python
+pip install matplotlib
+```
++ SciPy: para computación científica en Python
+```python
+pip install spicy
+```
++ Scikit-learn: para aprendizaje automático en Python
+```python
+pip install scikit-learn
+```
++ TensorFlow: para aprendizaje profundo en Python
+```python
+pip install tensorflow
+```
++ PyTorch: para aprendizaje profundo en Python
+```python
+pip install torch
+```
++ Django: para desarrollo web en Python
+```python
+pip install django
+```
++ Flask: para desarrollo web en Python
+```python
+pip install flask
+```
++ Requests: para hacer solicitudes HTTP en Python
+```python
+pip install requests
+```
+Y listo, esto ha sido todo por este reto.
+
+Espero haya sido claro para todos y que yo hubiese sido lo suficientemente clara.
+
+Muchas gracias
